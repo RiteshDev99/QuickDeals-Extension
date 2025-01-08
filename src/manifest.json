@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "QuickDeals",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.in/*"],
+      "js": ["/src/content/content.tsx"]
+    }
+  ]
+}
