@@ -16,5 +16,8 @@
       "matches": ["https://www.amazon.in/*"],
       "js": ["/src/content/content.tsx"]
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "/src/backgroundTab/background.js"
+  }
 }

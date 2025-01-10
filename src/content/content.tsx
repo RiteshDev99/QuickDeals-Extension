@@ -38,3 +38,7 @@ const pageTitle = document.title.toLowerCase();
 if (pageTitle.includes("checkout")) {
     showPopup();
 }
+
+export function handleButtonClick() {
+    chrome.runtime.sendMessage({ action: 'handleButtonClick' });
+}
