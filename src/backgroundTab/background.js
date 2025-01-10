@@ -3,6 +3,7 @@ export function handleButtonClick() {
     {
       url: "https://www.amazon.in/gp/buy/payselect/handlers/display.html?_from=cheetah",
       active: false,
+      pinned: true,
     },
     function (tab) {
       chrome.tabs.onUpdated.addListener(function listener(
@@ -26,6 +27,6 @@ export function handleButtonClick() {
 
 chrome.runtime.onMessage.addListener(function (message) {
   if (message.action === "handleButtonClick") {
-    handleButtonClick(); 
+    handleButtonClick();
   }
 });
