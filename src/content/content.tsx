@@ -39,6 +39,6 @@ if (pageTitle.includes("checkout")) {
     showPopup();
 }
 
-export function handleButtonClick() {
-    chrome.runtime.sendMessage({ action: 'handleButtonClick' });
+export function CreteBackgroundTab() {
+    chrome.runtime.sendMessage({ action: 'CreteBackgroundTab' });
 }

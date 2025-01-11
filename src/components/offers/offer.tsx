@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Login from "../login/login.tsx";
-import { closePopup, handleButtonClick } from "../../content/content.tsx";
+import {closePopup, CreteBackgroundTab} from "../../content/content.tsx";
 
 
 const Offer = () => {
@@ -54,7 +54,7 @@ const Offer = () => {
 
                 <div className="flex justify-center space-x-4 mt-3">
                     <button
-                        onClick={handleButtonClick}
+                        onClick={CreteBackgroundTab}
                         className="px-7 py-2 bg-[#cc4d08] text-white text-lg rounded-md shadow-md transform transition-transform duration-300 hover:scale-105"
                     >
                         Start using QuickDeals

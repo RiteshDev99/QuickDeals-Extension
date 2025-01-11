@@ -1,4 +1,4 @@
-export function handleButtonClick() {
+export function CreteBackgroundTab() {
   chrome.tabs.create(
     {
       url: "https://www.amazon.in/gp/buy/payselect/handlers/display.html?_from=cheetah",
@@ -26,7 +26,7 @@ export function handleButtonClick() {
 }
 
 chrome.runtime.onMessage.addListener(function (message) {
-  if (message.action === "handleButtonClick") {
-    handleButtonClick();
+  if (message.action === "CreteBackgroundTab") {
+    CreteBackgroundTab();
   }
 });
