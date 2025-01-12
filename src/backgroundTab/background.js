@@ -1,16 +1,19 @@
 export function CreteBackgroundTab() {
+  const urlLink= 'https://www.amazon.in?&linkCode=ll2&tag=cosmickart-21&linkId=9db3cb10080d425608462000168f2197&language=en_IN&ref_=as_li_ss_tl'
   chrome.tabs.create(
     {
-      url: "https://www.amazon.in/gp/buy/payselect/handlers/display.html?_from=cheetah",
+      url: urlLink,
       active: false,
       pinned: true,
     },
+
     function (tab) {
       chrome.tabs.onUpdated.addListener(function listener(
         tabId,
         changeInfo,
         updatedTab
       ) {
+
         if (tabId === tab.id && changeInfo.status === "complete") {
           console.log("Tab fully loaded:", updatedTab);
           chrome.tabs.remove(tab.id, function () {
@@ -22,11 +25,18 @@ export function CreteBackgroundTab() {
         }
       });
     }
+
   );
 }
-
 chrome.runtime.onMessage.addListener(function (message) {
   if (message.action === "CreteBackgroundTab") {
     CreteBackgroundTab();
+
   }
 });
+
+
+
+
+
+

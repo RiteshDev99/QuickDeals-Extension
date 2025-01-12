@@ -6,6 +6,7 @@ import {closePopup, CreteBackgroundTab} from "../../content/content.tsx";
 const Offer = () => {
     const [openToggle, setOpenToggle] = useState(false);
 
+
     const ToggleEvent = () => {
         setOpenToggle(!openToggle);
     };
@@ -57,7 +58,7 @@ const Offer = () => {
                         onClick={CreteBackgroundTab}
                         className="px-7 py-2 bg-[#cc4d08] text-white text-lg rounded-md shadow-md transform transition-transform duration-300 hover:scale-105"
                     >
-                        Start using QuickDeals
+                        Get Your Offers
                     </button>
                 </div>
             </div>
